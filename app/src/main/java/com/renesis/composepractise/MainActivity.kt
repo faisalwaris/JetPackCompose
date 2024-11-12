@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
@@ -41,7 +42,8 @@ class MainActivity : ComponentActivity() {
     fun MyApp() {
 //        NavigationGraph()
 
-        Column (modifier = Modifier.fillMaxSize().padding(20.dp).verticalScroll(state = rememberScrollState())) {
+        Column (modifier = Modifier.fillMaxSize().background(color = Color(0xFFf2f2f2)).padding(20.dp).verticalScroll(state = rememberScrollState(),
+            )) {
             Image(
                 painter = painterResource(R.drawable.happy_meal),
                 contentDescription = "This is burger with chips",
